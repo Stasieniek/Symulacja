@@ -15,8 +15,8 @@ public class Base extends Unit {
         if(x%helicopter_spawning_rate==0)
         {
             Helicopter helicopter = new Helicopter();
-            helicopter.setAP(15);
-            helicopter.setHP(10);
+            helicopter.setAP(20);
+            helicopter.setHP(15);
             return helicopter;
         }
 
@@ -24,15 +24,15 @@ public class Base extends Unit {
         {
             Tank tank = new Tank();
             tank.setAP(10);
-            tank.setHP(15);
+            tank.setHP(25);
             return tank;
         }
 
             else
         {
             Infantry infantry = new Infantry();
-            infantry.setAP(5);
-            infantry.setHP(5);
+            infantry.setAP(10);
+            infantry.setHP(10);
             return infantry;
         }
 
