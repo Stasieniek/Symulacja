@@ -20,38 +20,37 @@ public class Map implements IMapPlugin {
     }
     Map(){;}
 
+    public ArrayList getList2()
+    {
+        return list2;
+    }
 
 
     private int[][] map = new int[10][10];
 
 
-    private Base baseA = new Base();
-    private Base baseB = new Base();
-    private Base baseC = new Base();
+    private Base baseA = new Base(50,4);
+    private Base baseB = new Base(50,5);
+    private Base baseC = new Base(50,6);
 
 
 
     public void showResults()
     {
-
+        for(int i=0;i<list2.size();i++)
+            System.out.println("Baza "+(i+1)+" to: "+list2.get(i).getName()+" "+list2.get(i).getHP()+" "+list2.get(i).getX()+" "+list2.get(i).getY());
 
     }
     @Override
     public void addBase() {
 
         Random random2 = new Random();
-        baseA.setName(4);
-        baseA.setHP(50);
-        baseB.setName(5);
-        baseB.setHP(50);
-        baseC.setName(6);
-        baseC.setHP(50);
         list2.add(baseA);
         list2.add(baseB);
         list2.add(baseC);
         boolean check;
-        int xxx=0;
-        int yyy=0;
+        int xxx;
+        int yyy;
 
         for (int i=0; i<3;i++) {
             do {
@@ -102,8 +101,6 @@ public class Map implements IMapPlugin {
             int xx;
             int yy;
             int counter;
-            int random1;
-            int random2;
             for (int i=0; i<list2.size();i++) {
 
                 counter =0;

@@ -4,8 +4,11 @@ public class Base extends Unit {
     private int tank_pawning_rate=3;
     private int helicopter_spawning_rate=4;
     Random random = new Random();
-    public Base() {
+    public Base(double HP, int name)
+    {
         super();
+        this.setHP(HP);
+        this.setName(name);
     }
 
     public Unit generateUnit() {
@@ -37,13 +40,5 @@ public class Base extends Unit {
         }
 
 
-    }
-
-
-
-
-    public void setStartPoint()
-    {
-    	
     }
 }
