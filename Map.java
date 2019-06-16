@@ -19,7 +19,7 @@ public class Map implements IMapPlugin {
     }
     Map(){;}
 
-    private Random random = new Random();
+
 
     private int[][] map = new int[10][10];
 
@@ -28,9 +28,11 @@ public class Map implements IMapPlugin {
     private Base baseB = new Base();
     private Base baseC = new Base();
 
+
     @Override
     public void addBase() {
 
+        Random random2 = new Random();
         baseA.setName(4);
         baseB.setName(5);
         baseC.setName(6);
@@ -47,10 +49,10 @@ public class Map implements IMapPlugin {
                 check = true;
 
 
-                xxx = random.nextInt(size);
-                yyy = random.nextInt(size);
+                xxx = random2.nextInt(size);
+                yyy = random2.nextInt(size);
 
-                if (xxx >1&&xxx<(10-2)  && yyy >1&&yyy<(10-2)  ) {
+                if (xxx >1&&xxx<(size-2)  && yyy >1&&yyy<(size-2)  ) {
                     if (map[xxx][yyy] == 0) {
                         check = false;
                     }
@@ -67,9 +69,22 @@ public class Map implements IMapPlugin {
         list.add(listA);
         list.add(listB);
         list.add(listC);
-        for(int j=0;j<3;j++)
-            System.out.println(list.get(j).size());
         }
+        static int randomThrow()
+        {
+          int z;
+          int random1;
+          Random random = new Random();
+          random1 =random.nextInt(3);
+            if(random1==1)
+                z=1;
+            else if(random1==2)
+                z=0;
+            else
+                z=-1;
+          return z;
+        }
+
 
     @Override
         public void addUnit()
@@ -86,26 +101,13 @@ public class Map implements IMapPlugin {
                 counter =0;
                 do
                 {
-                    random1=random.nextInt(3);
-                    random2=random.nextInt(3);
-
-                    if(random1==1)
-                        xx=1;
-                    else if(random1==2)
-                        xx=0;
-                    else
-                        xx=-1;
-                    if(random2==1)
-                        yy=1;
-                    else if(random1==2)
-                        yy=0;
-                    else
-                        yy=-1;
+                    xx=randomThrow();
+                    yy=randomThrow();
 
                     xxx = list2[i].getX()+xx;
                     yyy = list2[i].getY()+yy;
 
-                    if( xxx>0&&xxx<10-1&&yyy>0&&yyy<10-1)
+                    if( xxx>0&&xxx<size-1&&yyy>0&&yyy<size-1)
                     {
                         if(map[xxx][yyy]==0)
                         {
@@ -124,27 +126,52 @@ public class Map implements IMapPlugin {
                     {
                         list.get(i).get(list.get(i).size()-1).setX(xxx);
                         list.get(i).get(list.get(i).size()-1).setY(yyy);
-                        System.out.println(list.get(i).get(list.get(i).size()-1).getX()+" "+list.get(i).get(list.get(i).size()-1).getY());
                         list.get(i).get(list.get(i).size()-1).setName(i+1);
                         map[xxx][yyy] = list.get(i).get(list.get(i).size()-1).getName();
                     }
                 }
 
             }
-
-            for(int j=0;j<3;j++)
-                System.out.println(list.get(j).size());
         }
-
 
     @Override
     public void doFight() {
+        int xx;
+        int yy;
+        int xxx;
+        int yyy;
+        int counter;
+        
+        for(int i=0;i<3;i++)
+        {
+            if(!list.get(i).isEmpty()) {
+                for (int l = 0; l < list.get(i).size(); l++) {
+                    counter=0;
+                    do
+                    {
+                        xx=randomThrow();
+                        yy=randomThrow();
+
+                        xxx= list.get(i).get(l).getX()+xx;
+                        yyy= list.get(i).get(l).getY()+yy;
+
+                        if( xxx>0&&xxx<size-1&&yyy>0&&yyy<size-1)
+                        {
+                            if(map[xxx][yyy]==0)
+                            {
+                                break;
+                            }
+                        }
+                        counter++;
+                    }while(counter<9);
 
 
 
 
 
-
+                }
+            }
+        }
 
 
     }
@@ -226,26 +253,13 @@ public class Map implements IMapPlugin {
                     counter=0;
                     do
                     {
-                        random1=random.nextInt(3);
-                        random2=random.nextInt(3);
-
-                        if(random1==1)
-                            xx=1;
-                        else if(random1==2)
-                            xx=0;
-                        else
-                            xx=-1;
-                        if(random2==1)
-                            yy=1;
-                        else if(random1==2)
-                            yy=0;
-                        else
-                            yy=-1;
+                     xx=randomThrow();
+                     yy=randomThrow();
 
                         xxx= list.get(i).get(l).getX()+xx;
                         yyy= list.get(i).get(l).getY()+yy;
 
-                        if( xxx>0&&xxx<10-1&&yyy>0&&yyy<10-1)
+                        if( xxx>0&&xxx<size-1&&yyy>0&&yyy<size-1)
                         {
                             if(map[xxx][yyy]==0)
                             {
