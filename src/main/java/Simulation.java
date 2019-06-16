@@ -3,7 +3,7 @@ public class Simulation {
     public static void main(String[] args) {
 
 
-        int counter = 1;
+        int counter = 2;
         IMapPlugin map = new Map(10,9);
 
         if(map instanceof Map) {

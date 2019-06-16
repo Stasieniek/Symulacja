@@ -1,4 +1,12 @@
-public class Helicopter extends Unit implements IUnit {
+public class Helicopter extends Unit implements ISoldier {
+
+    Helicopter(double ap, double hp)
+    {
+        super();
+        this.setAP(ap);
+        this.setHP(hp);
+    }
+
     private double armor;
     private int atMultipler;
 

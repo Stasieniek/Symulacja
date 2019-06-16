@@ -5,12 +5,12 @@ public class Map implements IMapPlugin {
 
 
 
-    private ArrayList<ArrayList<Unit>> list = new ArrayList<>();
-    private ArrayList<Base> list2 = new ArrayList<>();
+    private ArrayList<ArrayList<ISoldier>> list = new ArrayList<>();
+    private ArrayList<IBase> list2 = new ArrayList<>();
 
-    private ArrayList<Unit> listA = new ArrayList<>();
-    private ArrayList<Unit> listB = new ArrayList<>();
-    private ArrayList<Unit> listC = new ArrayList<>();
+    private ArrayList<ISoldier> listA = new ArrayList<>();
+    private ArrayList<ISoldier> listB = new ArrayList<>();
+    private ArrayList<ISoldier> listC = new ArrayList<>();
 
     private int size;
     private int patience;
@@ -25,13 +25,12 @@ public class Map implements IMapPlugin {
         return list2;
     }
 
-
     private int[][] map = new int[10][10];
 
 
-    private Base baseA = new Base(50,4);
-    private Base baseB = new Base(50,5);
-    private Base baseC = new Base(50,6);
+    IBase baseA = new Base(50,4);
+    IBase baseB = new Base(50,5);
+    IBase baseC = new Base(50,6);
 
 
 
@@ -77,7 +76,7 @@ public class Map implements IMapPlugin {
         list.add(listB);
         list.add(listC);
         }
-        static int randomThrow()
+        private static int randomThrow()
         {
           int z;
           int random1;
@@ -186,8 +185,9 @@ public class Map implements IMapPlugin {
                                     {
                                         list2.remove(licz1);
                                         map[xxx][yyy]=0;
-                                    }
 
+                                    }
+                                    break;
                                 }
                             }
                         }
@@ -289,8 +289,6 @@ public class Map implements IMapPlugin {
         int yy;
         int xxx;
         int yyy;
-        int random1;
-        int random2;
         int counter;
 
         for(int i=0; i<3;i++)

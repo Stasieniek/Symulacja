@@ -1,5 +1,5 @@
 import java.util.Random;
-public class Base extends Unit {
+public class Base extends Unit implements IBase {
 
     private int tank_pawning_rate=3;
     private int helicopter_spawning_rate=4;
@@ -11,31 +11,25 @@ public class Base extends Unit {
         this.setName(name);
     }
 
-    public Unit generateUnit() {
+    public ISoldier generateUnit() {
 
         int x;
         x=random.nextInt(12)+1;
         if(x%helicopter_spawning_rate==0)
         {
-            Helicopter helicopter = new Helicopter();
-            helicopter.setAP(20);
-            helicopter.setHP(15);
+            ISoldier helicopter = new Helicopter(20,15);
             return helicopter;
         }
 
             else if(x%tank_pawning_rate==0)
         {
-            Tank tank = new Tank();
-            tank.setAP(10);
-            tank.setHP(25);
+            ISoldier tank = new Tank(10,25);
             return tank;
         }
 
             else
         {
-            Infantry infantry = new Infantry();
-            infantry.setAP(10);
-            infantry.setHP(10);
+            ISoldier infantry = new Infantry(10,10);
             return infantry;
         }
 

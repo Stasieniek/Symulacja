@@ -1,5 +1,5 @@
 
-public abstract class Unit  {
+public abstract class Unit implements IUnit  {
 
     private int x;
     private int y;
