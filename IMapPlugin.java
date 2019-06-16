@@ -1,10 +1,10 @@
 public interface IMapPlugin {
     void move();
-   void addUnit();
+    void addUnit();
     void doFight();
     boolean alive();
     void addBase();
-   void show();
+    void show();
+    void showResults();
 
-//
 }

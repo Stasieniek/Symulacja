@@ -3,8 +3,8 @@ public class Simulation {
     public static void main(String[] args) {
 
 
-        int counter = 2;
-        IMapPlugin map = new Map(10);
+        int counter = 10;
+        IMapPlugin map = new Map(10,9);
 
         if(map instanceof Map) {
             map.addBase();
@@ -18,14 +18,13 @@ public class Simulation {
                 map.show();
                 map.move();
                 map.show();
-
-
+                map.doFight();
+                map.show();
             }
         }
+        map.showResults();
     }
-    public void showResults() {
 
-    }
 }
 
 
