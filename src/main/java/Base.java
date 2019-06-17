@@ -3,7 +3,8 @@ public class Base extends Unit implements IBase {
 
     private int tank_pawning_rate=3;
     private int helicopter_spawning_rate=4;
-    Random random = new Random();
+    private Random random = new Random();
+
     public Base(double HP, int name)
     {
         super();
@@ -11,25 +12,26 @@ public class Base extends Unit implements IBase {
         this.setName(name);
     }
 
-    public ISoldier generateUnit() {
+    public ISoldier generateUnit() { // w zależności od wylosowanej liczby "produkuje" określony typ jednostki
+                                    //piechota jest najsłabsza, ale ma też największą szansę na spawn
 
         int x;
         x=random.nextInt(12)+1;
         if(x%helicopter_spawning_rate==0)
         {
-            ISoldier helicopter = new Helicopter(20,15);
+            ISoldier helicopter = new Helicopter(20,30);
             return helicopter;
         }
 
             else if(x%tank_pawning_rate==0)
         {
-            ISoldier tank = new Tank(10,25);
+            ISoldier tank = new Tank(15,50);
             return tank;
         }
 
             else
         {
-            ISoldier infantry = new Infantry(10,10);
+            ISoldier infantry = new Infantry(10,15);
             return infantry;
         }
 

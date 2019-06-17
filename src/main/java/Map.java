@@ -3,38 +3,34 @@ import java.util.Random;
 public class Map implements IMapPlugin {
 
 
-    private ArrayList<ArrayList<ISoldier>> list = new ArrayList<>();
-    private IBase[] list2 = new IBase[3];
+    private ArrayList<ArrayList<ISoldier>> list = new ArrayList<>(); //lista na listy jednostek 3 frakcji
+    private IBase[] list2 = new IBase[3]; //tablica na bazy, ich liczba sie nie zwieksza ponad rozmiar tablicy
 
-    private ArrayList<ISoldier> listA = new ArrayList<>();
+    private ArrayList<ISoldier> listA = new ArrayList<>(); //listy na jednostki 3 frakcji
     private ArrayList<ISoldier> listB = new ArrayList<>();
     private ArrayList<ISoldier> listC = new ArrayList<>();
 
-    private int size;
-    private int patience;
+    private int size; //rozmiar mapy (to kwadrat)
+    private int patience; //parametr opisujacy ile maksymalnie prób akcji może podjąc jednostka tzn. jeśli
+                            //nie uda jej się wykonać akcji w przewidziana przez patience liczbe prob, to jej tura przepada
 
     Map(int size, int patience) {
         this.size = size;
         this.patience = patience;
     }
 
-    Map() {
-        ;
-    }
-
-    public IBase[] getList2() {
-        return list2;
-    }
-
-    private int[][] map = new int[10][10];
+    Map() {;}
 
 
-    private IBase baseA = new Base(50, 4);
-    private IBase baseB = new Base(50, 5);
-    private IBase baseC = new Base(50, 6);
+    private int[][] map = new int[10][10]; //mapa
 
 
-   public void showResults(int licznik) {
+    private IBase baseA = new Base(65, 4); //utworzenie baz dla każdej frakcji
+    private IBase baseB = new Base(65, 5);
+    private IBase baseC = new Base(65, 6);
+
+
+   public void showResults(int licznik) { //dowołuje się do obiektu klasy ShowResults by wyświetlić wyniki
         IResults show = new ShowResults();
 
         for(int i=0;i<3;i++)
@@ -52,7 +48,7 @@ public class Map implements IMapPlugin {
     }
 
     @Override
-    public void addBase() {
+    public void addBase() { //metoda używana tylko raz, na początku symulacji, inicjalizuje bazy, przypisuje do tablicy baz, losuje pozycję na mapie
 
         Random random2 = new Random();
         list2[0]=baseA;
@@ -62,7 +58,7 @@ public class Map implements IMapPlugin {
         int xxx;
         int yyy;
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 3; i++) { //losowanie wolnego miejsca na mapie i przypisywanie do niego bazy, próbowanie do skutku
             do {
                 check = true;
 
@@ -83,12 +79,12 @@ public class Map implements IMapPlugin {
 
         }
 
-        list.add(listA);
+        list.add(listA);//dodanie do "listy na listy frakcji" list jednostek każdej z frakcji
         list.add(listB);
         list.add(listC);
     }
 
-    private static int randomThrow() {
+    private static int randomThrow() { //metoda pomocnicza przy losowaniu miejsca, zwraca przesunięcie maksymalnie o 1
         int z;
         int random1;
         Random random = new Random();
@@ -104,7 +100,9 @@ public class Map implements IMapPlugin {
 
 
     @Override
-    public void addUnit() {
+    public void addUnit() { //metoda dodająca raz na turę jednostki
+                            //każda baza spawni max 1 jednostkę na turę tuż obok siebie, o ile uda jej się wylosować wolne miejsca w odpowiedniej
+                            //zadanym przez "patience" liczbie podejść
         int xxx;
         int yyy;
         int xx;
@@ -132,25 +130,19 @@ public class Map implements IMapPlugin {
 
 
                 if (counter < patience) {
-                    list.get(i).add(list2[i].generateUnit());
+                    list.get(i).add(list2[i].generateUnit());   //dodawanie stworzonej jednostki do mapy, przypisywanie jej, zgodnego z frakcją, imienia
                         list.get(i).get(list.get(i).size() - 1).setX(xxx);
                         list.get(i).get(list.get(i).size() - 1).setY(yyy);
                         list.get(i).get(list.get(i).size() - 1).setName(list2[i].getName() - 3);
                         map[xxx][yyy] = list.get(i).get(list.get(i).size() - 1).getName();
 
                 }
-
             }
-
-
-
-
-
         }
     }
 
     @Override
-    public void doFight() {
+    public void doFight() {//funkcja prowadząca raz na turę walkę
         int xx;
         int yy;
         int xxx;
@@ -184,7 +176,7 @@ public class Map implements IMapPlugin {
 
 
                     if (counter < patience) {
-                        if (map[xxx][yyy] > 3) {
+                        if (map[xxx][yyy] > 3) {                                                        //walka przebiega nieco odmiennie gdy atakuje się baze, a inaczej gdy atakuje sie jednostke
                             for (licz1 = 0; licz1 < 3; licz1++) {
 
                                 if(list2[licz1].getHP()>0)
@@ -192,18 +184,16 @@ public class Map implements IMapPlugin {
                                     if (xxx == list2[licz1].getX() && yyy == list2[licz1].getY()) {
 
                                         HP = list2[licz1].getHP();
-                                        AP = list.get(i).get(l).getAP();
+                                        AP = list.get(i).get(l).getAP()+list.get(i).get(l).attack();
                                         list2[licz1].setHP(HP - AP);
-                                        if (list2[licz1].getHP() <= 0) {
+                                        if (list2[licz1].getHP() <= 0) {    //pomniejszanie HP jednostki o wartość ataku atakującego
                                             map[xxx][yyy] = 0;
-                                            list2[licz1].setX(0);
+                                            list2[licz1].setX(0);       //usunięcie bazy z mapy
                                             list2[licz1].setY(0);
                                         }
                                         break;
                                     }
                                 }
-
-
                             }
 
                         } else {
@@ -212,22 +202,18 @@ public class Map implements IMapPlugin {
                                     if (xxx == list.get(licz1).get(licz2).getX() && yyy == list.get(licz1).get(licz2).getY())
                                     {
                                         HP = list.get(licz1).get(licz2).getHP();
-                                        AP = list.get(i).get(l).getAP();
+                                        AP = list.get(i).get(l).getAP()+list.get(i).get(l).attack();
                                         list.get(licz1).get(licz2).setHP(HP - AP);
 
                                         if (list.get(licz1).get(licz2).getHP() <= 0) {
-                                            list.get(licz1).remove(licz2);
+                                            list.get(licz1).remove(licz2); //w przeciewieństwie do baz, zniszczona jednostka jest usuwana z listy
                                             map[xxx][yyy] = 0;
 
                                         }
                                         break;
                                     }
-
                                 }
                             }
-
-
-
                         }
                     }
                 }
@@ -238,9 +224,10 @@ public class Map implements IMapPlugin {
 
 
     @Override
-    public boolean alive()
+    public boolean alive() //funkcja sprawdzająca czy warunki zakonczenia symulacji zostały spełnione
+                            //tj. na mapie zostali tylko reprezentanci jednej frakcji
     {
-        int a,b,c,d=0;
+        int a,b,c;
         if(list.get(0).size()==0&&baseA.getHP()<=0)
         {
             a=1;
@@ -286,7 +273,7 @@ public class Map implements IMapPlugin {
     }
 
     @Override
-    public void move()
+    public void move() //metoda odpowiedzialna za ruszanie kolejno wszystkimi dostepnymi jednostkami
     {
 
         int xx;
@@ -330,15 +317,5 @@ public class Map implements IMapPlugin {
                 }
             }
         }
-        System.out.println(list.get(0).size());
-        System.out.println(baseA.getHP());
-        System.out.println(list.get(1).size());
-        System.out.println(baseB.getHP());
-        System.out.println(list.get(2).size());
-        System.out.println(baseC.getHP());
     }
-
-
-
-
 }

@@ -1,17 +1,17 @@
-public class Simulation {
+public class Simulation
+{
 
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
 
 
-        int counter = 2;
+        int counter = 50 ;//licznik tur ile będzie toczyć się symulacja
         IMapPlugin map = new Map(10,9);
 
-        if(map instanceof Map) {
             map.addBase();
-
-
-            for (int l = 0; l < counter; l++) {
-                if (map.alive()) {
+            for (int l = 0; l < counter; l++) //głowna pętla programu
+            {
+                if (map.alive()) { //kończy symulacje przed upływem wszystkich tur gdy któraś frakcja wygra
                     System.out.println("To koniec");
                     break;
                 }
@@ -23,7 +23,6 @@ public class Simulation {
                 map.show();
                 map.showResults(l+1);
             }
-        }
     }
 
 }

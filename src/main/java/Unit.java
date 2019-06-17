@@ -1,15 +1,14 @@
 
 public abstract class Unit implements IUnit  {
-
-    private int x;
+//podstawowe statystki każdej jednostki, a więc: baza (ta nie używa ap), tank, helicopter, infantry
+    private int x;   //współrzędne jednostki na mapie
     private int y;
     private int name;
-    private double hp;
-    private double ap;
+    private double hp;//punkty życia
+    private double ap;//punkty ataku
 
 
-    public Unit() {
-    }
+    public Unit() {;}
 
     public int getX() {
         return x;
@@ -42,7 +41,6 @@ public abstract class Unit implements IUnit  {
         this.hp = hp;
     }
 
-
     public int getName() {
         return name;
     }
@@ -50,13 +48,9 @@ public abstract class Unit implements IUnit  {
     public void setName(int name) {
         this.name = name;
     }
-
-    public void attack()
+    double attack()
     {
-
-
+        double multiplier=0;
+        return multiplier;
     }
-
-
-
 }

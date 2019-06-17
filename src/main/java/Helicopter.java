@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Helicopter extends Unit implements ISoldier {
 
     Helicopter(double ap, double hp)
@@ -6,20 +8,14 @@ public class Helicopter extends Unit implements ISoldier {
         this.setAP(ap);
         this.setHP(hp);
     }
-
-    private double armor;
-    private int atMultipler;
-
-    public double getArmor() {
-        return armor;
-    }
-
-    public void setArmor(double armor) {
-        this.armor = armor;
-    }
-
-    public void attack()
+    public double attack()
     {
-
+        int x;
+        Random random = new Random();
+        x=random.nextInt(25)+1;
+        if(x==15)
+            return 20;
+        else
+            return 0;
     }
 }

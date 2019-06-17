@@ -10,5 +10,4 @@ public interface IUnit {
     void setHP(double hp);
     int getName();
     void setName(int name);
-
 }

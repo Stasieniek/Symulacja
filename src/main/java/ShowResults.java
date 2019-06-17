@@ -6,7 +6,7 @@ public class ShowResults implements IResults {
     private String plik = "Wyniki.txt";
 
 
-    public void print(int name, int x, int y, double HP, double AP,int licznik )
+    public void print(int name, int x, int y, double HP, double AP,int licznik )//drukowanie zadanych danych w pliku
     {
         try
         {
@@ -20,11 +20,7 @@ public class ShowResults implements IResults {
         {
             JOptionPane.showMessageDialog(null,"Nie");
         }
+
     }
-
-
-
-
-
 
 }
