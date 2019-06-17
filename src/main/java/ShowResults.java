@@ -1,14 +1,25 @@
+import javax.swing.*;
+import java.io.FileWriter;
 import java.util.ArrayList;
 
 public class ShowResults implements IResults {
-    String plik = "Wyniki.csv";
+    private String plik = "Wyniki.txt";
 
-    void print(ArrayList list, ArrayList list2)
+
+    public void print(int name, int x, int y, double HP, double AP,int licznik )
     {
+        try
+        {
+            FileWriter writer1 = new FileWriter(plik, true);
+            writer1.append("Runda,"+licznik+",Nazwa:,"+name+",X:,"+x+",Y:,"+y+",HP:,"+HP+",AP:,"+AP+"\r\n");
 
-
-
-
+            writer1.flush();
+            writer1.close();
+        }
+        catch(Exception z)
+        {
+            JOptionPane.showMessageDialog(null,"Nie");
+        }
     }
 
 

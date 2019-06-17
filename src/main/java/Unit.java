@@ -11,12 +11,6 @@ public abstract class Unit implements IUnit  {
     public Unit() {
     }
 
-
-
-
-
-
-
     public int getX() {
         return x;
     }
@@ -49,7 +43,6 @@ public abstract class Unit implements IUnit  {
     }
 
 
-
     public int getName() {
         return name;
     }
@@ -58,13 +51,6 @@ public abstract class Unit implements IUnit  {
         this.name = name;
     }
 
-
-
-    public boolean IsAlive()
-    {
-
-        return false;
-    }
     public void attack()
     {
 

@@ -5,6 +5,6 @@ public interface IMapPlugin {
     boolean alive();
     void addBase();
     void show();
-    void showResults();
+    void showResults(int licznik);
 
 }

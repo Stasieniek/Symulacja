@@ -12,6 +12,7 @@ public class Simulation {
 
             for (int l = 0; l < counter; l++) {
                 if (map.alive()) {
+                    System.out.println("To koniec");
                     break;
                 }
                 map.addUnit();
@@ -20,9 +21,9 @@ public class Simulation {
                 map.show();
                 map.doFight();
                 map.show();
+                map.showResults(l+1);
             }
         }
-        map.showResults();
     }
 
 }

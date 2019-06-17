@@ -1,9 +1,9 @@
-Simulation.class
 IUnit.class
 Map.class
-Tank.class
-Unit.class
 Base.class
 Helicopter.class
 IMapPlugin.class
+Simulation.class
+Tank.class
+Unit.class
 Infantry.class

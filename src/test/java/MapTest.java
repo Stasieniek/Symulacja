@@ -1,18 +1,43 @@
 import org.junit.Assert;
+import org.junit.Test;
+
+import static org.junit.Assert.*;
 
 public class MapTest {
+    Map map = new Map();
+    @Test
+    public void getList2() {
+    }
 
-    public void addBaseTest()
-    {
-        Map map = new Map();
+    @Test
+    public void addBase() {
+    }
+
+    @Test
+    public void addUnit() {
+
+
         map.addUnit();
-        Assert.assertEquals(map.getList2().size(),3);
+
         for(int i=0;i<3;i++)
         {
-            Assert.assertTrue(map.getList2().get(i) instanceof Base);
-
+            Assert.assertTrue(map.getList2()[i] instanceof Base);
         }
 
     }
+    @Test
+    public void doFight() {
 
+
+    }
+
+    @Test
+    public void show() {
+    }
+
+    @Test
+    public void move() {
+
+
+    }
 }
