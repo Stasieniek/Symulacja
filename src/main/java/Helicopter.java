@@ -8,7 +8,7 @@ public class Helicopter extends Unit implements ISoldier {
         this.setAP(ap);
         this.setHP(hp);
     }
-    public double attack()
+    public double attack()  /**odpowiedni dla klasy boost do ataku */
     {
         int x;
         Random random = new Random();

@@ -12,8 +12,8 @@ public class Base extends Unit implements IBase {
         this.setName(name);
     }
 
-    public ISoldier generateUnit() { // w zależności od wylosowanej liczby "produkuje" określony typ jednostki
-                                    //piechota jest najsłabsza, ale ma też największą szansę na spawn
+    public ISoldier generateUnit() { /** w zależności od wylosowanej liczby "produkuje" określony typ jednostki
+                                    np. piechota jest najsłabsza, ale ma też największą szansę na spawn */
 
         int x;
         x=random.nextInt(12)+1;

@@ -4,7 +4,7 @@ public interface IMapPlugin {
     void doFight();
     boolean alive();
     void addBase();
-    void show();
+   // void show();
     void showResults(int licznik);
 
 }

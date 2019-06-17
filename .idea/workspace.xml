@@ -11,7 +11,10 @@
       <change afterPath="$PROJECT_DIR$/src/main/java/ISoldier.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/ShowResults.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/test/java/BaseTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/HelicopterTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/InfantryTest.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/test/java/MapTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/UnitTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.classpath" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.euml2" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
@@ -44,11 +47,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Map.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
+            <state relative-caret-position="187">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Unit.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
               <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/UnitTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="21" column="9" lean-forward="true" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -59,53 +80,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Base.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="32" column="9" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Helicopter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Infantry.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="15" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ISoldier.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Tank.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" selection-start-line="22" selection-end-line="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Unit.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="53" column="26" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="26" />
+            <state relative-caret-position="389">
+              <caret line="23" column="9" lean-forward="true" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -120,19 +96,49 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Simulation.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/TankTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="82" selection-start-line="13" selection-start-column="82" selection-end-line="13" selection-end-column="82" />
+            <state relative-caret-position="187">
+              <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ShowResults.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/MapTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+            <state relative-caret-position="799">
+              <caret line="47" selection-start-line="47" selection-end-line="47" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/InfantryTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/HelicopterTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/BaseTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -153,13 +159,13 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>show</find>
       <find>sys</find>
       <find>20</find>
       <find>Sys</find>
       <find>list2</find>
       <find>syst</find>
       <find>ali</find>
+      <find>show</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -179,23 +185,26 @@
         <option value="$PROJECT_DIR$/src/Simulation.java" />
         <option value="$PROJECT_DIR$/src/Base.java" />
         <option value="$PROJECT_DIR$/src/Map.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/IUnitTemplate.java" />
         <option value="$PROJECT_DIR$/src/main/java/IBase.java" />
         <option value="$PROJECT_DIR$/src/test/java/BaseTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/IResults.java" />
-        <option value="$PROJECT_DIR$/src/main/java/IMapPlugin.java" />
-        <option value="$PROJECT_DIR$/src/test/java/MapTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Simulation.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ShowResults.java" />
         <option value="$PROJECT_DIR$/src/main/java/IUnit.java" />
         <option value="$PROJECT_DIR$/src/main/java/ISoldier.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Helicopter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Unit.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Tank.java" />
+        <option value="$PROJECT_DIR$/src/main/java/IMapPlugin.java" />
         <option value="$PROJECT_DIR$/src/main/java/Base.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Helicopter.java" />
         <option value="$PROJECT_DIR$/src/main/java/Infantry.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Tank.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Simulation.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Unit.java" />
+        <option value="$PROJECT_DIR$/src/test/java/HelicopterTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/InfantryTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/Map.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ShowResults.java" />
+        <option value="$PROJECT_DIR$/src/test/java/MapTest.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/UnitTest.java" />
       </list>
     </option>
   </component>
@@ -211,6 +220,11 @@
           <item name="Projekt" type="9519ce18:MavenProjectsStructure$ProjectNode" />
           <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
         </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="Projekt" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
+        </path>
       </expand>
       <select />
     </treeState>
@@ -225,6 +239,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -247,28 +263,12 @@
               <item name="Projekt" type="b2602c69:ProjectViewProjectNode" />
               <item name="Projekt" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Projekt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Projekt" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Projekt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Projekt" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -290,14 +290,14 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Admin\Desktop\d\Projekt\Projekt2\src\main" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\Desktop\d\Projekt\Projekt2\target\classes" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Admin\Desktop\d\Projekt\Projekt2\target\classes" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\Desktop\d\Projekt\Projekt2\src\main" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -380,16 +380,19 @@
       <workItem from="1560697970195" duration="11747000" />
       <workItem from="1560751999443" duration="13978000" />
       <workItem from="1560767311389" duration="130000" />
+      <workItem from="1560772912197" duration="530000" />
+      <workItem from="1560782387066" duration="1544000" />
+      <workItem from="1560790379411" duration="9067000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="105693000" />
+    <option name="totallyTimeSpent" value="116834000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16151386" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.122068234" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -397,8 +400,8 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49946696" weight="0.29796356" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.5490405" weight="0.08252948" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49840087" weight="0.2550911" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.69083154" weight="0.1886388" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49840087" weight="0.06430868" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -407,7 +410,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49946696" weight="0.11254019" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.45095947" side_tool="true" visible="true" weight="0.7202572" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.30916846" side_tool="true" visible="true" weight="0.1886388" />
       <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.4861516" weight="0.21536796" />
       <window_info anchor="bottom" id="Dependency Viewer" order="13" sideWeight="0.49946696" weight="0.03215434" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -415,7 +418,7 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Theme Preview" order="4" />
-      <window_info anchor="right" id="Maven" order="5" visible="true" weight="0.10660981" />
+      <window_info anchor="right" id="Maven" order="5" visible="true" weight="0.07782516" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Database" order="8" />
@@ -466,54 +469,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/IResults.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/IUnitTemplate.java" />
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="13" column="16" lean-forward="true" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/IResults.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/IMapPlugin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Wyniki.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/BaseTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/MapTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="uml://JavaScript-modules-diagram/C:/Users/Admin/Desktop/Aktualna/Projekt">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -529,13 +484,6 @@
           </Categories>
           <SCOPE>All</SCOPE>
           <VISIBILITY>Details</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/IBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="17" selection-start-column="17" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -560,23 +508,184 @@
           <ID>JAVA</ID>
           <OriginalElement />
           <nodes>
-            <node x="" y="">IUnit</node>
-            <node x="" y="">Unit</node>
-            <node x="" y="">IMapPlugin</node>
-            <node x="" y="">ISoldier</node>
-            <node x="" y="">IBase</node>
-            <node x="" y="">Helicopter</node>
-            <node x="" y="">Tank</node>
-            <node x="" y="">ShowResults</node>
-            <node x="" y="">Base</node>
-            <node x="" y="">Infantry</node>
-            <node x="" y="">Simulation</node>
-            <node x="" y="">IResults</node>
-            <node x="" y="">Map</node>
+            <node x="333.1580277777779" y="0.0">IUnit</node>
+            <node x="66.65802777777787" y="297.0">Unit</node>
+            <node x="834.1175833333334" y="886.0">IMapPlugin</node>
+            <node x="347.56758333333335" y="462.5">ISoldier</node>
+            <node x="445.75" y="777.0">IBase</node>
+            <node x="152.5" y="777.0">Helicopter</node>
+            <node x="283.5" y="777.0">Tank</node>
+            <node x="110.78633333333335" y="907.5">Base</node>
+            <node x="563.1175833333334" y="929.5">ShowResults</node>
+            <node x="21.5" y="777.0">Infantry</node>
+            <node x="656.6" y="1579.0">Simulation</node>
+            <node x="630.8675833333334" y="777.0">IResults</node>
+            <node x="426.4675833333334" y="1105.0">Map</node>
           </nodes>
           <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="0.7000000000000001" x="549.0" y="1284.0" />
+          <edges>
+            <edge source="Map" target="ShowResults">
+              <point x="47.111111111111086" y="-212.0" />
+              <point x="579.5786944444444" y="1065.0" />
+              <point x="688.1175833333334" y="1065.0" />
+              <point x="0.0" y="36.0" />
+            </edge>
+            <edge source="Base" target="Helicopter">
+              <point x="0.0" y="-58.0" />
+              <point x="201.78633333333335" y="866.0" />
+              <point x="208.0" y="866.0" />
+              <point x="0.0" y="24.5" />
+            </edge>
+            <edge source="Infantry" target="Unit">
+              <point x="0.0" y="-24.5" />
+              <point x="77.0" y="727.0" />
+              <point x="124.84552777777787" y="727.0" />
+              <point x="-8.3125" y="190.0" />
+            </edge>
+            <edge source="Unit" target="IUnit">
+              <point x="0.0" y="-190.0" />
+              <point x="133.15802777777787" y="272.0" />
+              <point x="355.3246944444445" y="272.0" />
+              <point x="-44.33333333333337" y="123.5" />
+            </edge>
+            <edge source="Map" target="IMapPlugin">
+              <point x="94.22222222222229" y="-212.0" />
+              <point x="626.6898055555557" y="1085.0" />
+              <point x="870.1175833333334" y="1085.0" />
+              <point x="-36.0" y="79.5" />
+            </edge>
+            <edge source="Helicopter" target="Unit">
+              <point x="-37.0" y="-24.5" />
+              <point x="171.0" y="727.0" />
+              <point x="141.47052777777787" y="727.0" />
+              <point x="8.3125" y="190.0" />
+            </edge>
+            <edge source="Base" target="Tank">
+              <point x="26.0" y="-58.0" />
+              <point x="227.78633333333335" y="846.0" />
+              <point x="339.0" y="846.0" />
+              <point x="0.0" y="24.5" />
+            </edge>
+            <edge source="Map" target="IResults">
+              <point x="70.66666666666663" y="-212.0" />
+              <point x="603.1342500000001" y="1075.0" />
+              <point x="823.6175833333334" y="1075.0" />
+              <point x="823.6175833333334" y="866.0" />
+              <point x="818.3675833333334" y="866.0" />
+              <point x="62.5" y="24.5" />
+            </edge>
+            <edge source="Simulation" target="IMapPlugin">
+              <point x="32.75" y="-24.5" />
+              <point x="754.85" y="1554.0" />
+              <point x="942.1175833333334" y="1554.0" />
+              <point x="36.0" y="79.5" />
+            </edge>
+            <edge source="ISoldier" target="IUnit">
+              <point x="0.0" y="-24.5" />
+              <point x="403.06758333333335" y="272.0" />
+              <point x="399.6580277777779" y="272.0" />
+              <point x="0.0" y="123.5" />
+            </edge>
+            <edge source="Tank" target="ISoldier">
+              <point x="37.0" y="-24.5" />
+              <point x="376.0" y="757.0" />
+              <point x="393.81758333333335" y="757.0" />
+              <point x="-9.25" y="24.5" />
+            </edge>
+            <edge source="Base" target="IBase">
+              <point x="78.0" y="-58.0" />
+              <point x="279.78633333333335" y="866.0" />
+              <point x="460.65" y="866.0" />
+              <point x="-59.60000000000002" y="24.5" />
+            </edge>
+            <edge source="Base" target="ISoldier">
+              <point x="52.0" y="-58.0" />
+              <point x="253.78633333333335" y="856.0" />
+              <point x="416.06758333333335" y="856.0" />
+              <point x="416.06758333333335" y="757.0" />
+              <point x="412.31758333333335" y="757.0" />
+              <point x="9.25" y="24.5" />
+            </edge>
+            <edge source="Helicopter" target="ISoldier">
+              <point x="37.0" y="-24.5" />
+              <point x="245.0" y="747.0" />
+              <point x="375.31758333333335" y="747.0" />
+              <point x="-27.75" y="24.5" />
+            </edge>
+            <edge source="Base" target="Unit">
+              <point x="-52.0" y="-58.0" />
+              <point x="149.78633333333335" y="856.0" />
+              <point x="11.0" y="856.0" />
+              <point x="11.0" y="707.0" />
+              <point x="91.59552777777787" y="707.0" />
+              <point x="-41.5625" y="190.0" />
+            </edge>
+            <edge source="ShowResults" target="IResults">
+              <point x="0.0" y="-36.0" />
+              <point x="688.1175833333334" y="866.0" />
+              <point x="693.3675833333334" y="866.0" />
+              <point x="-62.5" y="24.5" />
+            </edge>
+            <edge source="Tank" target="Unit">
+              <point x="-37.0" y="-24.5" />
+              <point x="302.0" y="707.0" />
+              <point x="174.72052777777787" y="707.0" />
+              <point x="41.5625" y="190.0" />
+            </edge>
+            <edge source="Base" target="Infantry">
+              <point x="-26.0" y="-58.0" />
+              <point x="175.78633333333335" y="846.0" />
+              <point x="77.0" y="846.0" />
+              <point x="0.0" y="24.5" />
+            </edge>
+            <edge source="Map" target="IBase">
+              <point x="-47.111111111111086" y="-212.0" />
+              <point x="485.3564722222223" y="1085.0" />
+              <point x="499.85" y="1085.0" />
+              <point x="499.85" y="866.0" />
+              <point x="490.45000000000005" y="866.0" />
+              <point x="-29.799999999999955" y="24.5" />
+            </edge>
+            <edge source="Map" target="Base">
+              <point x="-94.22222222222217" y="-212.0" />
+              <point x="438.2453611111112" y="1085.0" />
+              <point x="201.78633333333335" y="1085.0" />
+              <point x="0.0" y="58.0" />
+            </edge>
+            <edge source="Map" target="ISoldier">
+              <point x="-70.66666666666663" y="-212.0" />
+              <point x="461.80091666666675" y="1075.0" />
+              <point x="435.25" y="1075.0" />
+              <point x="435.25" y="757.0" />
+              <point x="430.81758333333335" y="757.0" />
+              <point x="27.75" y="24.5" />
+            </edge>
+            <edge source="IBase" target="ISoldier">
+              <point x="-37.25" y="-24.5" />
+              <point x="483.0" y="757.0" />
+              <point x="449.31758333333335" y="757.0" />
+              <point x="46.25" y="24.5" />
+            </edge>
+            <edge source="Simulation" target="Map">
+              <point x="-32.75" y="-24.5" />
+              <point x="689.35" y="1554.0" />
+              <point x="532.4675833333333" y="1554.0" />
+              <point x="0.0" y="212.0" />
+            </edge>
+            <edge source="IBase" target="IUnit">
+              <point x="37.25" y="-24.5" />
+              <point x="557.5" y="272.0" />
+              <point x="443.99136111111125" y="272.0" />
+              <point x="44.33333333333337" y="123.5" />
+            </edge>
+            <edge source="Infantry" target="ISoldier">
+              <point x="37.0" y="-24.5" />
+              <point x="114.0" y="737.0" />
+              <point x="356.81758333333335" y="737.0" />
+              <point x="-46.25" y="24.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.5999999999999998" x="314.0" y="1035.0" />
           <SelectedNodes />
           <Categories>
             <Category>Fields</Category>
@@ -587,10 +696,53 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/IMapPlugin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/IBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="28" lean-forward="true" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Helicopter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+        <state relative-caret-position="306">
+          <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Wyniki.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-24690" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Infantry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Map.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-442">
+          <caret line="40" column="9" lean-forward="true" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/IResults.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="17" selection-start-column="17" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -601,17 +753,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Tank.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ShowResults.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="340">
+          <caret line="20" column="13" lean-forward="true" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Unit.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Simulation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="53" column="26" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="26" />
+        <state relative-caret-position="221">
+          <caret line="13" column="111" selection-start-line="13" selection-start-column="111" selection-end-line="13" selection-end-column="111" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Tank.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
@@ -622,44 +791,68 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Simulation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="82" selection-start-line="13" selection-start-column="82" selection-end-line="13" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ShowResults.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Infantry.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="15" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Base.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="32" column="9" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
+        <state relative-caret-position="389">
+          <caret line="23" column="9" lean-forward="true" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Map.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/UnitTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        <state relative-caret-position="357">
+          <caret line="21" column="9" lean-forward="true" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TankTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/MapTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="47" selection-start-line="47" selection-end-line="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/InfantryTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/HelicopterTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/BaseTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Unit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
         </state>
       </provider>
     </entry>

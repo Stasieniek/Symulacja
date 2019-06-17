@@ -1,11 +1,11 @@
 
 public abstract class Unit implements IUnit  {
-//podstawowe statystki każdej jednostki, a więc: baza (ta nie używa ap), tank, helicopter, infantry
-    private int x;   //współrzędne jednostki na mapie
-    private int y;
+/**podstawowe statystki każdej jednostki, a więc: baza (ta nie używa ap), tank, helicopter, infantry  */
+    private int x;   /**@param x - współrzędna x na mapie */
+    private int y;  /**@param y - wspołrzędna y na mapie */
     private int name;
-    private double hp;//punkty życia
-    private double ap;//punkty ataku
+    private double hp; /** @param hp - punkty życia */
+    private double ap; /** @param ap punkty ataku */
 
 
     public Unit() {;}

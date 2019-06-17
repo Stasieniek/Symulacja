@@ -3,16 +3,20 @@ import java.util.Random;
 public class Map implements IMapPlugin {
 
 
-    private ArrayList<ArrayList<ISoldier>> list = new ArrayList<>(); //lista na listy jednostek 3 frakcji
-    private IBase[] list2 = new IBase[3]; //tablica na bazy, ich liczba sie nie zwieksza ponad rozmiar tablicy
+    /** @param list  jest to lista na jednostki 3 frakcji zawartychw symulacji*/
+    protected ArrayList<ArrayList<ISoldier>> list = new ArrayList<>();
 
-    private ArrayList<ISoldier> listA = new ArrayList<>(); //listy na jednostki 3 frakcji
+    /** @param list2 jest tablicą na 3 bazy, po jednej na każdą frakcję, nie pojawiają się dodatkowe bazy, więc nie ma potrzebys stosowanie listy*/
+    protected IBase[] list2 = new IBase[3];
+
+    /** @param listA ,B, C są to listy na jednostki każdej z frakcji. Jedna lista - jedna frakcja*/
+    private ArrayList<ISoldier> listA = new ArrayList<>();
     private ArrayList<ISoldier> listB = new ArrayList<>();
     private ArrayList<ISoldier> listC = new ArrayList<>();
 
-    private int size; //rozmiar mapy (to kwadrat)
-    private int patience; //parametr opisujacy ile maksymalnie prób akcji może podjąc jednostka tzn. jeśli
-                            //nie uda jej się wykonać akcji w przewidziana przez patience liczbe prob, to jej tura przepada
+    private int size; /**rozmiar mapy (to kwadrat)*/
+    private int patience; /**parametr opisujacy ile maksymalnie prób akcji może podjąc jednostka tzn. jeśli
+                            nie uda jej się wykonać akcji w przewidziana przez patience liczbe prob, to jej tura przepada*/
 
     Map(int size, int patience) {
         this.size = size;
@@ -22,19 +26,23 @@ public class Map implements IMapPlugin {
     Map() {;}
 
 
-    private int[][] map = new int[10][10]; //mapa
+    protected int[][] map = new int[10][10]; /** @param map jest kwadratowa mapa, przestrzeń, na której dzieje się symulacja */
 
 
-    private IBase baseA = new Base(65, 4); //utworzenie baz dla każdej frakcji
-    private IBase baseB = new Base(65, 5);
-    private IBase baseC = new Base(65, 6);
+     protected IBase baseA = new Base(65, 4); /**utworzenie baz dla każdej frakcji*/
+     protected IBase baseB = new Base(65, 5);
+     protected IBase baseC = new Base(65, 6);
 
 
-   public void showResults(int licznik) { //dowołuje się do obiektu klasy ShowResults by wyświetlić wyniki
+   public void showResults(int licznik) { /**dowołuje się do obiektu klasy ShowResults by dane jednostek obecnych na planszy*/
         IResults show = new ShowResults();
 
         for(int i=0;i<3;i++)
         {
+            if(licznik==1&&i==0)
+            {
+                show.print(0,0,0,0,0,-1);
+            }
             show.print(list2[i].getName(), list2[i].getX(),list2[i].getY(),list2[i].getHP(),list2[i].getAP(),licznik);
             for(int l=0;l<list.get(i).size();l++)
             {
@@ -48,10 +56,10 @@ public class Map implements IMapPlugin {
     }
 
     @Override
-    public void addBase() { //metoda używana tylko raz, na początku symulacji, inicjalizuje bazy, przypisuje do tablicy baz, losuje pozycję na mapie
+    public void addBase() { /**metoda używana tylko raz, na początku symulacji, inicjalizuje bazy, przypisuje do tablicy baz, losuje pozycję na mapie */
 
         Random random2 = new Random();
-        list2[0]=baseA;
+        list2[0]=baseA; /** przypisanie baz każdej frakcji do tablicy na bazy */
         list2[1]=baseB;
         list2[2]=baseC;
         boolean check;
@@ -75,16 +83,17 @@ public class Map implements IMapPlugin {
 
             list2[i].setX(xxx);
             list2[i].setY(yyy);
-            map[xxx][yyy] = list2[i].getName();
+            map[xxx][yyy] = list2[i].getName(); /** ustawienie współrzędnych i przypisanie na ich podstawie pozycji baz na mapie*/
 
         }
 
-        list.add(listA);//dodanie do "listy na listy frakcji" list jednostek każdej z frakcji
+        list.add(listA);/**dodanie do "listy na listy frakcji" list jednostek każdej z frakcji*/
         list.add(listB);
         list.add(listC);
     }
 
-    private static int randomThrow() { //metoda pomocnicza przy losowaniu miejsca, zwraca przesunięcie maksymalnie o 1
+    private static int randomThrow() { /** @return metoda pomocnicza przy losowaniu miejsca, zwraca z przesunięcie maksymalnie o 1, bo o tyle mogą się porszyać jednostki, robi
+                                        to na podstawie wylosoanego parametru                        */
         int z;
         int random1;
         Random random = new Random();
@@ -100,9 +109,9 @@ public class Map implements IMapPlugin {
 
 
     @Override
-    public void addUnit() { //metoda dodająca raz na turę jednostki
-                            //każda baza spawni max 1 jednostkę na turę tuż obok siebie, o ile uda jej się wylosować wolne miejsca w odpowiedniej
-                            //zadanym przez "patience" liczbie podejść
+    public void addUnit() { /**metoda dodająca raz na turę jednostki
+                            każda baza spawnuje max 1 jednostkę na turę tuż obok siebie, o ile uda jej się wylosować wolne miejsca w odpowiedniej
+                            zadanym przez "patience" liczbie podejść */
         int xxx;
         int yyy;
         int xx;
@@ -130,7 +139,8 @@ public class Map implements IMapPlugin {
 
 
                 if (counter < patience) {
-                    list.get(i).add(list2[i].generateUnit());   //dodawanie stworzonej jednostki do mapy, przypisywanie jej, zgodnego z frakcją, imienia
+                    list.get(i).add(list2[i].generateUnit());   /**dodawanie stworzonej jednostki do mapy, przypisywanie jej, zgodnego z frakcją, imienia. Na mapie jednostki maja imiona od 1-3,/
+                                                                a bazy od 4-6. Baza nr 4 produkuje jednostki nr 1, nr 5 jednostki nr 2 itd */
                         list.get(i).get(list.get(i).size() - 1).setX(xxx);
                         list.get(i).get(list.get(i).size() - 1).setY(yyy);
                         list.get(i).get(list.get(i).size() - 1).setName(list2[i].getName() - 3);
@@ -142,7 +152,7 @@ public class Map implements IMapPlugin {
     }
 
     @Override
-    public void doFight() {//funkcja prowadząca raz na turę walkę
+    public void doFight() {/**funkcja prowadząca raz na turę walkę, bo tyle razy jest wywoływana */
         int xx;
         int yy;
         int xxx;
@@ -164,7 +174,8 @@ public class Map implements IMapPlugin {
                         yy = randomThrow();
 
                         xxx = list.get(i).get(l).getX() + xx;
-                        yyy = list.get(i).get(l).getY() + yy;
+                        yyy = list.get(i).get(l).getY() + yy;       /** losowanie wspolrzecnych wokol jednostki i sprawdzanie, czy stoi na nich wrog, jeśli tak
+                                                                    @param break i rozpoczęcie fazy ataku*/
 
                         if (xxx > 0 && xxx < size - 1 && yyy > 0 && yyy < size - 1) {
                             if (map[xxx][yyy] != 0 && map[xxx][yyy] != list.get(i).get(l).getName() && map[xxx][yyy] != list.get(i).get(l).getName() + 3) {
@@ -176,7 +187,7 @@ public class Map implements IMapPlugin {
 
 
                     if (counter < patience) {
-                        if (map[xxx][yyy] > 3) {                                                        //walka przebiega nieco odmiennie gdy atakuje się baze, a inaczej gdy atakuje sie jednostke
+                        if (map[xxx][yyy] > 3) {                                    /**walka przebiega nieco odmiennie gdy atakuje się baze, a inaczej gdy atakuje sie jednostke, stąd wydzielenie*/
                             for (licz1 = 0; licz1 < 3; licz1++) {
 
                                 if(list2[licz1].getHP()>0)
@@ -186,9 +197,9 @@ public class Map implements IMapPlugin {
                                         HP = list2[licz1].getHP();
                                         AP = list.get(i).get(l).getAP()+list.get(i).get(l).attack();
                                         list2[licz1].setHP(HP - AP);
-                                        if (list2[licz1].getHP() <= 0) {    //pomniejszanie HP jednostki o wartość ataku atakującego
+                                        if (list2[licz1].getHP() <= 0) {    /**pomniejszanie HP jednostki o wartość ataku atakującego będąca składową jego punktów ataku i specjalnego boosta, innego dla każego rodzaju Unit */
                                             map[xxx][yyy] = 0;
-                                            list2[licz1].setX(0);       //usunięcie bazy z mapy
+                                            list2[licz1].setX(0);       /**usunięcie bazy z mapy, jeśli straciła wszystkie punkty HP, już nie może produkować jednostek, jednak dalej jest na liście */
                                             list2[licz1].setY(0);
                                         }
                                         break;
@@ -206,7 +217,7 @@ public class Map implements IMapPlugin {
                                         list.get(licz1).get(licz2).setHP(HP - AP);
 
                                         if (list.get(licz1).get(licz2).getHP() <= 0) {
-                                            list.get(licz1).remove(licz2); //w przeciewieństwie do baz, zniszczona jednostka jest usuwana z listy
+                                            list.get(licz1).remove(licz2); /**w przeciewieństwie do baz, zniszczona jednostka jest usuwana z listy */
                                             map[xxx][yyy] = 0;
 
                                         }
@@ -224,8 +235,8 @@ public class Map implements IMapPlugin {
 
 
     @Override
-    public boolean alive() //funkcja sprawdzająca czy warunki zakonczenia symulacji zostały spełnione
-                            //tj. na mapie zostali tylko reprezentanci jednej frakcji
+    public boolean alive() /**funkcja sprawdzająca czy warunki zakonczenia symulacji zostały spełnione
+                            tj. na mapie zostali tylko reprezentanci jednej frakcji */
     {
         int a,b,c;
         if(list.get(0).size()==0&&baseA.getHP()<=0)
@@ -262,7 +273,7 @@ public class Map implements IMapPlugin {
             return false;
 
     }
-    public void show() {
+    /*public void show() {
         for (int l = 0; l < size; l++) {
             for (int i = 0; i < size; i++) {
                 System.out.print(map[l][i] + " ");
@@ -270,10 +281,10 @@ public class Map implements IMapPlugin {
             System.out.print("\n");
         }
         System.out.print("\n\n");
-    }
+    }*/
 
     @Override
-    public void move() //metoda odpowiedzialna za ruszanie kolejno wszystkimi dostepnymi jednostkami
+    public void move() /**metoda odpowiedzialna za ruszanie kolejno wszystkimi dostepnymi jednostkami */
     {
 
         int xx;
@@ -291,7 +302,7 @@ public class Map implements IMapPlugin {
                     counter=0;
                     do
                     {
-                     xx=randomThrow();
+                     xx=randomThrow();  /**losowanie wolnego miejsca przy użyciu funcki RandomThrow */
                      yy=randomThrow();
 
                         xxx= list.get(i).get(l).getX()+xx;
@@ -309,10 +320,10 @@ public class Map implements IMapPlugin {
 
                     if(counter<patience)
                     {
-                        map[list.get(i).get(l).getX()][list.get(i).get(l).getY()]=0;
+                        map[list.get(i).get(l).getX()][list.get(i).get(l).getY()]=0; /** na starym miejscu pobytu jednostki stawiane jest 0, tj. miejsce jest uznawane za puste*/
                         list.get(i).get(l).setX(xxx);
                         list.get(i).get(l).setY(yyy);
-                        map[xxx][yyy] = list.get(i).get(l).getName();
+                        map[xxx][yyy] = list.get(i).get(l).getName();       /** Ustawianie nowych współrzędnych jednostki i ustwienie jej wg. nich na mapie */
                     }
                 }
             }

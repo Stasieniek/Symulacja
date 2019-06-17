@@ -11,10 +11,21 @@ public class ShowResults implements IResults {
         try
         {
             FileWriter writer1 = new FileWriter(plik, true);
-            writer1.append("Runda,"+licznik+",Nazwa:,"+name+",X:,"+x+",Y:,"+y+",HP:,"+HP+",AP:,"+AP+"\r\n");
+            if(licznik==-1)
+            {
+                writer1.append("Licznik"+","+"Imię"+","+"X"+","+"Y"+","+"HP"+","+"AP"+"\r\n");
+                writer1.flush();
+                writer1.close();
+            }
+            else
+            {
 
-            writer1.flush();
-            writer1.close();
+                writer1.append(licznik+","+name+","+x+","+y+","+HP+","+AP+"\r\n");
+
+                writer1.flush();
+                writer1.close();
+            }
+
         }
         catch(Exception z)
         {

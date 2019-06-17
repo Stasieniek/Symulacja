@@ -9,7 +9,7 @@ public class Tank extends Unit implements ISoldier  {
         this.setAP(ap);
         this.setHP(hp);
     }
-    public double attack()
+    public double attack() /**odpowiedni dla klasy boost do ataku */
     {
         int x;
         Tank tank = new Tank(15,50);
